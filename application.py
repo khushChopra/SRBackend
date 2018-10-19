@@ -8,21 +8,7 @@ connection_string = 'Driver={ODBC Driver 13 for SQL Server};Server=tcp:searchres
 @app.route("/", methods=['GET', 'POST', 'PUT', 'DELETE'])
 def hello():
 
-	conn = pyodbc.connect(connection_string)
-	cur = conn.cursor()
-	cur.execute("select * from first")
-	res = ""
-	for row in cur.fetchall():
-		res = res+str(row) + "\n"
-	cur.close()
-	conn.close()
-	return res
-	"""if request.headers['Content-Type'] == 'application/json':
-		res = json.loads(request.json)
-		print(res['0'])
-		return "Message " + json.dumps(request.json)
-	return request.method
-	return "Hello Worlds!"""
+	return "Hello Khush!"
 
 @app.route('/insert/<id>', methods=['POST'])
 def hello12(id):
