@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify, json, Response
-import pyodbc
+#import pyodbc
 app = Flask(__name__)
 
 connection_string = 'Driver={ODBC Driver 13 for SQL Server};Server=tcp:searchrescue.database.windows.net,1433;Database=searchrescue;Uid=piyushchoudhary@searchrescue;Pwd=piyush@123;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;'
@@ -9,7 +9,7 @@ connection_string = 'Driver={ODBC Driver 13 for SQL Server};Server=tcp:searchres
 def hello():
 
 	return "Hello Khush!"
-
+"""
 @app.route('/insert/<id>', methods=['POST'])
 def hello12(id):
 	conn = pyodbc.connect(connection_string)
