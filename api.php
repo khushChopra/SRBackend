@@ -1,10 +1,11 @@
+Yeah
 <?php
 $connectionInfo = array("UID" => "piyushchoudhary@khushmayankdb", "pwd" => "piyush@123", "Database" => "kmdb", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:khushmayankdb.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
-
+echo "yeh chala";
 echo $conn;
-$tsql= "SELECT *
+$tsql= "SELECT [fname] [num]
         FROM users
         ";
 $getResults= sqlsrv_query($conn, $tsql);
