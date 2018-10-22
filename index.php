@@ -1,4 +1,4 @@
 <?php
 
-echo "Hellmnbssasmoa as,.nsknbdkjxbjh!";
+echo "Love you azure!";
 
