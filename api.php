@@ -1,14 +1,9 @@
 <?php
-$serverName = "sqlsrv:server = tcp:khushmayankdb.database.windows.net,1433";
-$connectionOptions = array(
-    "Database" => "kmdb",
-    "Uid" => "piyushchoudhary",
-    "PWD" => "piyush@123"
-);
-//Establishes the connection
-$conn = sqlsrv_connect($serverName, $connectionOptions);
+$connectionInfo = array("UID" => "piyushchoudhary@khushmayankdb", "pwd" => "piyush@123", "Database" => "kmdb", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+$serverName = "tcp:khushmayankdb.database.windows.net,1433";
+$conn = sqlsrv_connect($serverName, $connectionInfo);
 
-echo($conn);
+echo $conn;
 $tsql= "SELECT *
         FROM users
         ";
