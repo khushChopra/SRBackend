@@ -18,7 +18,7 @@ while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
 	$temp = array(
 		"fname" =>$row['fname'],
 		"num" =>$row['num']
-	)
+	);
 	array_push($products_arr["records"], $temp);
 }
 http_response_code(200);
