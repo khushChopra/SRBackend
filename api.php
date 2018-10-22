@@ -4,6 +4,9 @@ $connectionInfo = array("UID" => "piyushchoudhary@khushmayankdb", "pwd" => "piyu
 $serverName = "tcp:khushmayankdb.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 echo "yeh chala";
+if ($conn==false){
+	echo("connect ho gya");
+}
 echo $conn;
 $tsql= "SELECT [fname] [num]
         FROM users
@@ -17,4 +20,5 @@ while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
 }
 echo("Chala?")
 sqlsrv_free_stmt($getResults);
+sqlsrv_close($conn);
 ?>
