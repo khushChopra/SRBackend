@@ -7,11 +7,11 @@ echo "\n";
 
 switch ($method) {
   case 'GET':
-    $sql = "GET"; break;echo $sql;
+    $sql = "GET";echo $sql; break;
   case 'PUT':
-    $sql = "PUT"; break;echo $sql;
+    $sql = "PUT";echo $sql; break;
   case 'POST':
-    $sql = "POST"; break;echo $sql;
+    $sql = "POST";echo $sql; break;
   case 'DELETE':
-    $sql = "DELETE"; break;echo $sql;
+    $sql = "DELETE";echo $sql; break;
 }
