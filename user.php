@@ -42,34 +42,4 @@ switch ($method) {
     
 }
 
-
-/*
-// inserting takes in json and inserts it into the users table
-//$tsql1= "insert into users values('".$input['fname']."','".$input['num']."')";
-//$insertReview = sqlsrv_query($conn, $tsql1);
-
-// delete with json entity of user
-$tsql2= "delete from users where num = '".$input['num']."'";
-$insertReview = sqlsrv_query($conn, $tsql2);
-
-
-//    to get all users back in json 
-
-$tsql= "SELECT *
-        FROM users
-        ";
-$getResults= sqlsrv_query($conn, $tsql);
-if ($getResults == FALSE)
-    echo (sqlsrv_errors());
-$products_arr=array();
-$products_arr["records"]=array();
-while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
-	$temp = array(
-		"fname" =>$row['fname'],
-		"num" =>$row['num']
-	);
-	array_push($products_arr["records"], $temp);
-}
-http_response_code(200);
-echo json_encode($products_arr);
 ?>

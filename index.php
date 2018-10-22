@@ -1,6 +1,6 @@
 <?php
 
-echo "Edit 14 User api done";
+echo "Edit 15 User api finished";
 $method = $_SERVER['REQUEST_METHOD'];
 
 echo "\n";
@@ -17,11 +17,11 @@ switch ($method) {
 }
 /*
 
-
+create
 curl --header "Content-Type: application/json" --request POST --data '{"fname":"Prop test","num":"1253698745"}' https://khushmayank.azurewebsites.net/api.php
 
+read all
 curl https://khushmayank.azurewebsites.net/api.php
 
-curl https://khushmayank.azurewebsites.net/api.php?num={num}
-
-curl -X "DELETE" https://khushmayank.azurewebsites.net
+delete
+curl https://khushmayank.azurewebsites.net/api.php?num=1253698745
