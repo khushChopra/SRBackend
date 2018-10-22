@@ -1,7 +1,4 @@
 <?php
 
-echo "Helloa Khush!";
+echo "Hellmnbmoa Khush!";
 
-
-
-?>
