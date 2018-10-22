@@ -1,7 +1,7 @@
 <?php
 
 echo "Edit 12 trying on method segregation";
-echo $_SERVER['REQUEST_METHOD'];
+$method = $_SERVER['REQUEST_METHOD'];
 
 echo "\n";
 
