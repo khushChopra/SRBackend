@@ -12,3 +12,4 @@ catch (PDOException $e) {
     die(print_r($e));
 }
 
+?>
