@@ -1,7 +1,17 @@
 <?php
 
-echo "Edit 11 trying to delete rows";
+echo "Edit 12 trying on method segregation";
+echo $_SERVER['REQUEST_METHOD'];
 
+echo "\n";
 
-
-curl --header "Content-Type: application/json" --request POST --data '{"fname":"Finally","num":"8888888888"}' https://khushmayank.azurewebsites.net/api.php
+switch ($method) {
+  case 'GET':
+    $sql = "GET"; break;echo $sql;
+  case 'PUT':
+    $sql = "PUT"; break;echo $sql;
+  case 'POST':
+    $sql = "POST"; break;echo $sql;
+  case 'DELETE':
+    $sql = "DELETE"; break;echo $sql;
+}
