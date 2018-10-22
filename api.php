@@ -13,7 +13,7 @@ $input = json_decode(file_get_contents('php://input'),true);
 
 // inserting takes in json and inserts it into the users table
 echo $input->fname;
-$tsql1= "insert into users values('".$input->fname."','".$input->num."')";
+$tsql1= "insert into users values('".$input['fname']."','".$input['num']."')";
 $insertReview = sqlsrv_query($conn, $tsql1);
 
 
