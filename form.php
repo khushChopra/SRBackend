@@ -55,7 +55,7 @@ switch ($method) {
   case 'POST':
     $tsql1= "insert into form values(".
     	"'".$input['fname']."',".
-    	"'".$input['num']."',"
+    	"'".$input['num']."',".
     	$input['num_of_people'].",".
     	$input['min_age'].",".
     	$input['max_age'].",".
