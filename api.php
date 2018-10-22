@@ -19,6 +19,6 @@ while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
  echo ($row['fname'] . " " . $row['num'] . PHP_EOL);
 }
 echo("Chala?")
-sqlsrv_free_stmt($getResults);
-sqlsrv_close($conn);
+//sqlsrv_free_stmt($getResults);
+//sqlsrv_close($conn);
 ?>
