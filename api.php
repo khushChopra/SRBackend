@@ -7,6 +7,8 @@ $connectionOptions = array(
 );
 //Establishes the connection
 $conn = sqlsrv_connect($serverName, $connectionOptions);
+
+echo($conn);
 $tsql= "SELECT *
         FROM users
         ";
