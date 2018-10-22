@@ -13,6 +13,11 @@ $input = json_decode(file_get_contents('php://input'),true);
 
 switch ($method) {
   case 'GET':
+  	if($_GET['id']){
+  		$tsql2= "delete from users where num = '".$_GET['id']."'";
+		$insertReview = sqlsrv_query($conn, $tsql2);
+		break;
+  	}
   	$tsql= "SELECT * FROM users";
 	$getResults= sqlsrv_query($conn, $tsql);
 	if ($getResults == FALSE)
@@ -34,9 +39,7 @@ switch ($method) {
 	$insertReview = sqlsrv_query($conn, $tsql1);
 	break;
   case 'DELETE':
-    $tsql2= "delete from users where num = '".$input['num']."'";
-	$insertReview = sqlsrv_query($conn, $tsql2);
-	break;
+    
 }
 
 

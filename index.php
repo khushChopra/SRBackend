@@ -1,6 +1,6 @@
 <?php
 
-echo "Edit 13 User api done";
+echo "Edit 14 User api done";
 $method = $_SERVER['REQUEST_METHOD'];
 
 echo "\n";
@@ -15,3 +15,13 @@ switch ($method) {
   case 'DELETE':
     $sql = "DELETE";echo $sql; break;
 }
+/*
+
+
+curl --header "Content-Type: application/json" --request POST --data '{"fname":"Prop test","num":"1253698745"}' https://khushmayank.azurewebsites.net/api.php
+
+curl https://khushmayank.azurewebsites.net/api.php
+
+curl https://khushmayank.azurewebsites.net/api.php?num={num}
+
+curl -X "DELETE" https://khushmayank.azurewebsites.net
