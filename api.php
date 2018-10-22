@@ -13,8 +13,8 @@ $input = json_decode(file_get_contents('php://input'),true);
 
 switch ($method) {
   case 'GET':
-  	if($_GET['id']){
-  		$tsql2= "delete from users where num = '".$_GET['id']."'";
+  	if($_GET['num']){
+  		$tsql2= "delete from users where num = '".$_GET['num']."'";
 		$insertReview = sqlsrv_query($conn, $tsql2);
 		break;
   	}
