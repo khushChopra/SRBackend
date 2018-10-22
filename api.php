@@ -12,9 +12,12 @@ $input = json_decode(file_get_contents('php://input'),true);
 
 
 // inserting takes in json and inserts it into the users table
-echo $input->fname;
-$tsql1= "insert into users values('".$input['fname']."','".$input['num']."')";
-$insertReview = sqlsrv_query($conn, $tsql1);
+//$tsql1= "insert into users values('".$input['fname']."','".$input['num']."')";
+//$insertReview = sqlsrv_query($conn, $tsql1);
+
+// delete with json entity of user
+$tsql2= "delete from users where num = '".$input['num']."'";
+$insertReview = sqlsrv_query($conn, $tsql2);
 
 
 //    to get all users back in json
