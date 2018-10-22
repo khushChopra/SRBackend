@@ -1,6 +1,6 @@
 <?php
 
-echo "Edit 12 trying on method segregation";
+echo "Edit 13 User api done";
 $method = $_SERVER['REQUEST_METHOD'];
 
 echo "\n";
