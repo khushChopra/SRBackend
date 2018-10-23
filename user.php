@@ -23,13 +23,13 @@ switch ($method) {
 	if ($getResults == FALSE)
 	    echo (sqlsrv_errors());
 	$products_arr=array();
-	$products_arr["records"]=array();
+	$products_arr["users"]=array();
 	while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
 		$temp = array(
 			"fname" =>$row['fname'],
 			"num" =>$row['num']
 		);
-		array_push($products_arr["records"], $temp);
+		array_push($products_arr["users"], $temp);
 	}
 	http_response_code(200);
 	echo json_encode($products_arr);

@@ -23,14 +23,14 @@ switch ($method) {
 	if ($getResults == FALSE)
 	    echo (sqlsrv_errors());
 	$products_arr=array();
-	$products_arr["forms"]=array();
+	$products_arr["notifications"]=array();
 	while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
 		$temp = array(
 			"id" =>$row['id'],
 			"title" =>$row['title'],
     		"body" =>$row['body']
 		);
-		array_push($products_arr["forms"], $temp);
+		array_push($products_arr["notifications"], $temp);
 	}
 	http_response_code(200);
 	echo json_encode($products_arr);

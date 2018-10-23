@@ -1,6 +1,6 @@
 <?php
 
-echo "Edit 17 notification api test";
+echo "Edit 18 Finalized and did readme";
 $method = $_SERVER['REQUEST_METHOD'];
 
 echo "\n";
@@ -77,11 +77,14 @@ create table noti(
 create
 curl --header "Content-Type: application/json" --request POST --data '{"id":"15987JSIWH","title":"Kerela flood","body":"Fill form to provide your best info to help the search and rescue team"}' https://khushmayank.azurewebsites.net/noti.php
 
+
+
+
 read all
 curl https://khushmayank.azurewebsites.net/noti.php
 
 delete
-curl https://khushmayank.azurewebsites.net/noti.php?id=1253698745
+curl https://khushmayank.azurewebsites.net/noti.php?id=0000000000
 
 
 
