@@ -1,20 +1,46 @@
 <?php
 
-echo "Edit 18 Finalized and did readme";
+echo "Welcome to search and rescue admin control";
 $method = $_SERVER['REQUEST_METHOD'];
 
 echo "\n";
 
+$connectionInfo = array("UID" => "piyushchoudhary@khushmayankdb", "pwd" => "piyush@123", "Database" => "kmdb", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+$serverName = "tcp:khushmayankdb.database.windows.net,1433";
+$conn = sqlsrv_connect($serverName, $connectionInfo);
+
 switch ($method) {
   case 'GET':
-    $sql = "GET";echo $sql; break;
+    break;
   case 'PUT':
-    $sql = "PUT";echo $sql; break;
+    break;
   case 'POST':
-    $sql = "POST";echo $sql; break;
+     $tsql1= "insert into noti values(".
+    	"'".$_GET['notiID']."',".
+    	"'".$_GET['noftTitle']."',".
+    	"'".$_GET['notiBody']."'".
+        ")";
+	$insertReview = sqlsrv_query($conn, $tsql1);
+
+
+
+    break;
   case 'DELETE':
-    $sql = "DELETE";echo $sql; break;
+    break;
 }
+?>
+
+
+<form method="post" action="">  
+  Notification ID: <input type="text" name="notiID" value="">
+  <br>
+  Notification Title: <input type="text" name="noftTitle" value="">
+  <br>
+  Notification Body: <input type="text" name="notiBody" value="">
+  <br>
+  <input type="submit" name="submit" value="Submit">  
+</form>
+
 /*
 
 create
