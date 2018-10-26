@@ -16,9 +16,9 @@ switch ($method) {
     break;
   case 'POST':
      $tsql1= "insert into noti values(".
-    	"'".$_GET['notiID']."',".
-    	"'".$_GET['noftTitle']."',".
-    	"'".$_GET['notiBody']."'".
+    	"'".$_POST['notiID']."',".
+    	"'".$_POST['noftTitle']."',".
+    	"'".$_POST['notiBody']."'".
         ")";
 	$insertReview = sqlsrv_query($conn, $tsql1);
 
