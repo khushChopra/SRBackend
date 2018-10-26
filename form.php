@@ -16,6 +16,8 @@ switch ($method) {
   	if($_GET['num']){
   		$tsql2= "delete from form where num = '".$_GET['num']."'";
 		$insertReview = sqlsrv_query($conn, $tsql2);
+  		$tsql2= "delete from imgt where num = '".$_GET['num']."'";
+		$insertReview = sqlsrv_query($conn, $tsql2);
 		break;
   	}
   	$tsql= "SELECT * FROM form";
@@ -41,11 +43,7 @@ switch ($method) {
     		"street_blocked"  =>$row['street_blocked'],
     		"reachibility"  =>$row['reachibility'],
     		"lat"  =>$row['lat'],
-    		"log"  =>$row['log'],
-    		"north" =>$row['north'],
-    		"south" =>$row['south'],
-    		"east" =>$row['east'],
-    		"west" =>$row['west'],
+    		"log"  =>$row['log']
 		);
 		array_push($products_arr["forms"], $temp);
 	}
@@ -74,6 +72,18 @@ switch ($method) {
     	$input['lat'].",".
     	$input['log'].",".
 
+    	"'".""."',".
+    	"'".""."',".
+    	"'".""."',".
+    	"'".""."'".
+        ")";
+
+
+
+
+	$insertReview = sqlsrv_query($conn, $tsql1);
+    $tsql1= "insert into imgt values(".
+    	"'".$input['num']."',".
     	"'".$input['north']."',".
     	"'".$input['south']."',".
     	"'".$input['east']."',".
